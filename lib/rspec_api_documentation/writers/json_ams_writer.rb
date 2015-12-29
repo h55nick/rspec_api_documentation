@@ -82,6 +82,10 @@ module RspecApiDocumentation
       def sections
         @sections ||= IndexHelper.sections(examples, @configuration)
       end
+
+      def examples
+        @examples ||= @index.examples
+      end
     end
 
     class JsonAmsExample
