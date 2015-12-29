@@ -65,8 +65,7 @@ module RspecApiDocumentation
         {
           id: section_id(section),
           name: section[:resource_name],
-          examples_json: section_examples(section),
-          examples: json_examples,
+          examples: section_examples(section),
         }
       end
 
@@ -83,10 +82,6 @@ module RspecApiDocumentation
       def sections
         @sections ||= IndexHelper.sections(examples, @configuration)
       end
-
-      #
-      ## included
-      #
     end
 
     class JsonAmsExample
